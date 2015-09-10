@@ -1,0 +1,49 @@
+/**
+ * SearchBar Component Style for tingle
+ * @author caoke.ck
+ *
+ * Copyright 2014-2015, Tingle Team, Alinw.
+ * All rights reserved.
+ */
+.tSearchBar {
+  padding: 8px 15px;
+}
+.tSearchBarLabel {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.tSearchBarLabel.active {
+  top: 50%;
+  left: 0;
+  margin: -6px 0 0 23px;
+}
+.tSearchBarLabel > * {
+  vertical-align: top;
+}
+.tSearchBarQueryIcon {
+  width: 13px;
+  height: 13px;
+  fill: #999;
+}
+.tSearchBarTextfield {
+  padding: 4px 28px;
+  line-height: 20px;
+  border: none;
+}
+.tSearchBarTextfield:focus {
+  outline: none;
+}
+.tSearchBarDelBtn.active {
+  top: 50%;
+  right: 0;
+  margin: -18px 13px 0 0;
+}
+.tSearchBarDelIcon {
+  width: 16px;
+  height: 16px;
+  fill: #999;
+}
+
+/*# sourceMappingURL=SearchBar.css.map */

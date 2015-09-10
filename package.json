@@ -1,0 +1,36 @@
+{
+  "name": "tingle-search-bar",
+  "version": "0.0.1",
+  "description": "The `SearchBar Component` for tinglejs",
+  "repository": "https://github.com/tinglejs/tingle-search-bar.git",
+  "author": "gbk",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "tingle-search-bar",
+    "SearchBar"
+  ],
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "tingle-context": "latest",
+    "tingle-style": "latest",
+    "tingle-icon": "latest"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.19",
+    "babel-loader": "^5.3.2",
+    "gulp": "^3.9.0",
+    "fastclick": "^1.0.6",
+    "react": "^0.13.3",
+    "tingle-dev-tools": "latest",
+    "zepto": "0.0.4"
+  },
+  "scripts": {
+    "start": "gulp server"
+  },
+  "license": "MIT",
+  "screenshots": "http://img1.tbcdn.cn/tfscom/TB1uzbIJpXXXXboaXXXXXXXXXXX"
+}
