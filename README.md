@@ -6,7 +6,7 @@ The `SearchBar Component` for tinglejs
 
 SearchBar 是搜索查询用的输入框。
 
-![效果图](http://img1.tbcdn.cn/tfscom/TB1uzbIJpXXXXboaXXXXXXXXXXX)
+<img src="https://img.alicdn.com/tps/TB1p.j3JpXXXXXkXVXXXXXXXXXX-750-1254.png" width="375"/>
 
 ## Install
 
