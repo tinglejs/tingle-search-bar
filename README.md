@@ -10,13 +10,13 @@ SearchBar 是搜索查询用的输入框。
 
 ## Install
 
-```
+```bash
 npm install tingle-search-bar --save
 ```
 
 ## Simple Usage
 
-```
+```js
 constructor(props) {
     super(props);
     this.state = {
