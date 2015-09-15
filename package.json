@@ -1,7 +1,7 @@
 {
   "name": "tingle-search-bar",
   "version": "0.2.0",
-  "description": "The `SearchBar Component` for tinglejs",
+  "description": "贴顶搜索框",
   "repository": "https://github.com/tinglejs/tingle-search-bar.git",
   "author": "gbk",
   "main": "src/index.js",
@@ -11,7 +11,8 @@
   ],
   "keywords": [
     "tingle-search-bar",
-    "SearchBar"
+    "SearchBar",
+    "搜索框"
   ],
   "dependencies": {
     "classnames": "^2.1.2",
