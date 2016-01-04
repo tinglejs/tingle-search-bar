@@ -20,7 +20,8 @@ npm install tingle-search-bar --save
 constructor(props) {
     super(props);
     this.state = {
-        value: ''
+        value: '',
+        keyCode: ''
     };
 }
 handleChange(value) {
@@ -29,11 +30,18 @@ handleChange(value) {
         value: value
     });
 }
+handleKeyDown(keyCode, value) {
+    var t = this;
+    t.setState({
+        keyCode: keyCode,
+        value: value
+    });
+}
 render() {
     var t = this;
     return (
         <div>
-            <SearchBar placeholder="搜索" value={t.state.value} autoFocus={false} onChange={t.handleChange.bind(t)}/>
+            <SearchBar placeholder="搜索" value={t.state.value} autoFocus={false} onChange={t.handleChange.bind(t)} onKeyDown={t.handleKeyDown.bind(t)}/>
             {t.state.value}
         </div>
     );
@@ -49,6 +57,7 @@ render() {
 |value|optional|-|输入框的输入字符|
 |autoFocus|optional|false|是否自动获取焦点|
 |onChange|optional|-|输入变化后触发的事件，需要在这里变更 value 的值|
+|onKeyDown|optional|-|key down时触发事件，回传keyCode和value值|
 
 ## Links 相关链接
 
