@@ -15,7 +15,8 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ''
+            value: '',
+            keyCode: ''
         }
     }
 
@@ -26,12 +27,23 @@ class Demo extends React.Component {
         });
     }
 
+    handleKeyDown(keyCode, value){
+        var t = this;
+        t.setState({
+            value: value,
+            keyCode: keyCode
+        });
+    }
+
     render() {
         var t = this;
         return (
             <div className="tSearchBarDemoFixTop">
-                <SearchBar placeholder="搜索" value={t.state.value} autoFocus={false} onChange={t.handleChange.bind(t)}/>
-                {t.state.value}
+                <SearchBar placeholder="搜索" value={t.state.value} autoFocus={false} onChange={t.handleChange.bind(t)} onKeyDown={t.handleKeyDown.bind(t)} />
+                <h3>onChange:</h3>
+                <div>{t.state.value}</div>
+                <h3>onKeyDown:</h3>
+                <div>{t.state.keyCode} {t.state.value}</div>
             </div>
         );
     }

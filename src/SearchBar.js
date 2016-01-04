@@ -61,6 +61,15 @@ class SearchBar extends React.Component {
         t.props.onChange(value);
     }
 
+    handleKeyDown(e){
+        var t = this;
+        var value = e.target.value;
+        t.setState({
+            empty: !value
+        });
+        t.props.onKeyDown(e.keyCode, value);
+    }
+
     handleDelete() {
         var t = this;
         t.handleChange({
@@ -77,7 +86,12 @@ class SearchBar extends React.Component {
             <div ref="root" className={classnames('tSearchBar tFBH tBCc tPR', {
                 [t.props.className]: !!t.props.className
             })}>
-                <input ref="textfield" type="text" className="tSearchBarTextfield tDB tFB1 tR5 tBCf tFS14" value={t.props.value} onFocus={t.handleFocus.bind(t, true)} onBlur={t.handleFocus.bind(t, false)} onChange={t.handleChange.bind(t)}/>
+                <input ref="textfield" type="search" className="tSearchBarTextfield tDB tFB1 tR5 tBCf tFS14" value={t.props.value}
+                       onFocus={t.handleFocus.bind(t, true)}
+                       onBlur={t.handleFocus.bind(t, false)}
+                       onChange={t.handleChange.bind(t)}
+                       onKeyDown={t.handleKeyDown.bind(t)}
+                    />
                 <span ref="label" className={classnames('tSearchBarLabel tPA', {
                     'active': t.state.focus || !t.state.empty,
                     'tFBH tFBAC tFBJC': !t.state.focus && t.state.empty
@@ -102,7 +116,8 @@ SearchBar.defaultProps = {
     placeholder: '搜索',
     value: '',
     autoFocus: false,
-    onChange: Context.noop
+    onChange: Context.noop,
+    onKeyDown: Context.noop
 }
 
 // http://facebook.github.io/react/docs/reusable-components.html
@@ -111,7 +126,8 @@ SearchBar.propTypes = {
     placeholder: React.PropTypes.string,
     value: React.PropTypes.string,
     autoFocus: React.PropTypes.bool,
-    onChange: React.PropTypes.func
+    onChange: React.PropTypes.func,
+    onKeyDown: React.PropTypes.func
 }
 
 SearchBar.displayName = 'SearchBar';
