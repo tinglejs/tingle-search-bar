@@ -29,6 +29,12 @@ class SearchBar extends React.Component {
         }
     }
 
+    componentWillReceiveProps(props){
+        this.setState({
+            empty: !props.value
+        });
+    }
+
     handleFocus(focus) {
         var t = this;
         if (focus) {
